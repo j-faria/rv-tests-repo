@@ -2,11 +2,11 @@
 !*  =======
 !*  Calculate the radial velocity curve at times 'time' with given parameters P,
 !*  K, ecc, omega and t0 corresponding to period, semi-amplitude, eccentricity,
-!*  argument of the periastron and time of periastron.
+!*  argument of the periastron and time of periastron. vsys is the systematic
+!*  velocity.
 !*
-!*  This routine works for NP planets but one observatory only and no 
-!*  systematic velocity!
-subroutine get_rvN(time, P, K, ecc, omega, t0, vel, nt, np)
+!*  This routine works for NP planets but one observatory only!
+subroutine get_rvN(time, P, K, ecc, omega, t0, vsys, vel, nt, np)
     implicit none
     
 !f2py intent(in) time(nt)
@@ -16,6 +16,7 @@ subroutine get_rvN(time, P, K, ecc, omega, t0, vel, nt, np)
 !f2py intent(in) ecc(np)
 !f2py intent(in) omega(np)
 !f2py intent(in) t0(np)
+!f2py intent(in) vsys
 !f2py intent(hide) nt
 !f2py intent(hide) np
 
@@ -23,6 +24,7 @@ subroutine get_rvN(time, P, K, ecc, omega, t0, vel, nt, np)
     integer nt, np ! number of observations, planets
     real (kind=8), dimension(nt) :: time, vel
     real (kind=8), dimension(np) :: p, k, ecc, omega, t0
+    real (kind=8) :: vsys
 
 ! Local variables
     integer,parameter :: sp = selected_real_kind(p=6,r=37)
@@ -32,7 +34,7 @@ subroutine get_rvN(time, P, K, ecc, omega, t0, vel, nt, np)
     real(dp), parameter :: pi = 3.1415926535897932384626433832795029_dp
     real(dp), parameter :: twopi = 2.0_dp * pi 
 
-    vel = 0._dp
+    vel = vsys
     do i=1,np
       vel = vel - rv_curve(time, P(i), K(i), ecc(i), omega(i), t0(i))
     end do 

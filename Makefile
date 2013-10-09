@@ -9,7 +9,7 @@ test: get_rv1.so get_rvN.so
 get_rv1.so: get_rv1.f90
 	f2py -m get_rv1 -c $^ $(F2PYFLAGS)
 
-get_rvN.so: get_rvN.f90
+get_rvN.so: get_rvN.f90 likelihood.f90
 	f2py -m get_rvN -c $^ $(F2PYFLAGS)
 
 clean: 
