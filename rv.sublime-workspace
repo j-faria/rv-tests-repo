@@ -1,0 +1,626 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bo",
+				"bottom_tick_loc"
+			],
+			[
+				"st",
+				"stdout_write"
+			],
+			[
+				"f",
+				"from"
+			],
+			[
+				"fm",
+				"fmax2"
+			],
+			[
+				"t",
+				"t"
+			],
+			[
+				"Per",
+				"PeriodogramBase"
+			],
+			[
+				"x",
+				"xdif"
+			],
+			[
+				"fma",
+				"fmax3"
+			],
+			[
+				"fmax",
+				"fmax1"
+			],
+			[
+				"ou",
+				"output_period"
+			],
+			[
+				"fre",
+				"freq"
+			],
+			[
+				"whi",
+				"which"
+			],
+			[
+				"Frequen",
+				"frequencies"
+			],
+			[
+				"N",
+				"Nyquist"
+			],
+			[
+				"ma",
+				"maxim"
+			],
+			[
+				"v",
+				"verbose"
+			],
+			[
+				"sys",
+				"system"
+			],
+			[
+				"nee",
+				"needs_local_scope"
+			],
+			[
+				"res",
+				"restrict"
+			],
+			[
+				"he",
+				"help"
+			],
+			[
+				"pro",
+				"provenance"
+			],
+			[
+				"err",
+				"error_full"
+			],
+			[
+				"max",
+				"maxval"
+			],
+			[
+				"do_",
+				"do_fit"
+			],
+			[
+				"red",
+				"red"
+			],
+			[
+				"d",
+				"d"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"arg",
+				"arg_string"
+			],
+			[
+				"k",
+				"k"
+			],
+			[
+				"com",
+				"command"
+			],
+			[
+				"comm",
+				"command_list"
+			],
+			[
+				"get",
+				"get_chi2"
+			],
+			[
+				"rvS",
+				"rvSeries"
+			],
+			[
+				"ge",
+				"get_chi2"
+			],
+			[
+				"rv",
+				"rvS"
+			],
+			[
+				"Op",
+				"Options"
+			],
+			[
+				"par",
+				"parameter_s"
+			],
+			[
+				"ar",
+				"argv"
+			],
+			[
+				"do",
+				"docopt"
+			],
+			[
+				"plo",
+				"plot_usage"
+			],
+			[
+				"spl",
+				"splitted"
+			],
+			[
+				"se",
+				"set_default"
+			],
+			[
+				"arg_",
+				"arg_string_split"
+			],
+			[
+				"n",
+				"needs_local_scope"
+			],
+			[
+				"de",
+				"default_a"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"class",
+				"classes"
+			],
+			[
+				"li",
+				"line_magic"
+			],
+			[
+				"ret",
+				"return_starts_with"
+			],
+			[
+				"lar",
+				"large_sep"
+			],
+			[
+				"mx",
+				"mxCorr"
+			],
+			[
+				"o",
+				"o"
+			],
+			[
+				"la",
+				"label"
+			],
+			[
+				"r02",
+				"r02err"
+			],
+			[
+				"frer0",
+				"freqr02"
+			],
+			[
+				"r1",
+				"r10err"
+			],
+			[
+				"r10",
+				"r10obs"
+			],
+			[
+				"r01",
+				"r01obs"
+			],
+			[
+				"freq",
+				"freqr01"
+			],
+			[
+				"nr",
+				"nr01"
+			],
+			[
+				"le",
+				"legend"
+			],
+			[
+				"hr",
+				"hrpointA"
+			],
+			[
+				"lo",
+				"logg"
+			],
+			[
+				"from",
+				"from_model"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "get_rv.f90",
+			"settings":
+			{
+				"buffer_size": 3095,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: __magic__"
+			],
+			[
+				"",
+				"Snippet: While Loop"
+			]
+		],
+		"width": 408.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/joao/work/RadialVelocity/get_rv.f90",
+		"/home/joao/work/OPEN/setup.py",
+		"/home/joao/work/OPEN/OPEN/_OPENversion.py",
+		"/home/joao/work/OPEN/OPEN/stats.py",
+		"/home/joao/work/Dawson-Fabrycky/periodogram_DF.c",
+		"/home/joao/work/OPEN/OPEN/periodograms.py",
+		"/home/joao/work/OPEN/OPEN/untitled",
+		"/home/joao/work/OPEN/OPEN/galileo.py",
+		"/home/joao/work/OPEN/OPEN.sublime-project",
+		"/home/joao/work/OPEN/OPEN/ipshell.py",
+		"/home/joao/work/OPEN/OPEN/shell_colors.py",
+		"/home/joao/work/OPEN/OPEN/core.py",
+		"/home/joao/work/OPEN/OPEN/commands.py",
+		"/home/joao/work/OPEN/open.py",
+		"/home/joao/work/OPEN/OPEN/logger.py",
+		"/home/joao/work/OPEN/OPEN/rvIO.py",
+		"/home/joao/work/OPEN/OPEN/classes.py",
+		"/home/joao/work/OPEN/OPEN/default.py",
+		"/home/joao/work/OPEN/OPEN/_version.py",
+		"/home/joao/work/OPEN/OPEN/dev-notes.txt",
+		"/home/joao/work/OPEN/OPEN/plots_config.py",
+		"/home/joao/work/OPEN/OPEN/keplerOrbit.py",
+		"/home/joao/work/OPEN/OPEN/minimize.py",
+		"/home/joao/work/evf/teste.txt",
+		"/home/joao/Python/namespaces.py",
+		"/home/joao/work/lombscargle/timmings.py",
+		"/usr/local/lib/python2.7/dist-packages/astroML/time_series/_periodogram.py",
+		"/usr/local/lib/python2.7/dist-packages/astroML/time_series/periodogram.py",
+		"/usr/local/lib/python2.7/dist-packages/astroML/time_series/generate.py",
+		"/home/joao/work/OPEN/OPEN/docopt.py",
+		"/home/joao/work/OPEN/OPEN/__init__.py",
+		"/home/joao/Python/utils.py",
+		"/home/joao/Python/classes.py",
+		"/home/joao/work/read_rv/classes.py",
+		"/home/joao/Python/interactive_console7.py",
+		"/home/joao/.config/sublime-text-3/Packages/User/OPENhead.sublime-snippet",
+		"/home/joao/work/OPEN/open/ipshell.py",
+		"/home/joao/work/OPEN/open",
+		"/home/joao/work/OPEN/OPEN.py",
+		"/home/joao/Programs/work/sphinx/index.rst",
+		"/home/joao/Programs/work/sphinx/_build/html/index.html",
+		"/home/joao/Python/custom-shell.py",
+		"/home/joao/Python/command-line-interface.py",
+		"/home/joao/Programs/PlanetPack-1.4/source/Shell.cpp",
+		"/home/joao/Python/ipynb2article.py",
+		"/home/joao/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/joao/.config/sublime-text-3/Packages/User/C++.sublime-settings",
+		"/home/joao/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/joao/Documents/FCUP/TESE/bcz_fit/sig_bcz_input",
+		"/home/joao/Programs/CODE_freqFit/sig_genetic_mc/sig/commonarray.f",
+		"/home/joao/Programs/CODE_freqFit/sig_genetic_mc/sig/commonvar.f",
+		"/home/joao/Programs/CODE_freqFit/sig_genetic/common/fitlamb.f",
+		"/home/joao/Programs/CODE_freqFit/sig_genetic_mc/common/fitlamb_genetic.f",
+		"/home/joao/Programs/CODE_freqFit/sig_genetic_mc/sig/types.f",
+		"/home/joao/Programs/CODE_freqFit/sig_genetic_mc/common/fitlamb.f",
+		"/home/joao/Programs/CODE_freqFit/sig_genetic_mc/common/fit.f",
+		"/home/joao/Programs/CODE_freqFit/sig_genetic_mc/Makefile",
+		"/home/joao/Programs/CODE_freqFit/sig_genetic_mc/sig/fun.f",
+		"/home/joao/Programs/CODE_freqFit/sig_genetic_mc/sig/commonarray.o",
+		"/home/joao/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/joao/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/joao/Documents/FCUP/TESE/scripts/hr-best-models-MESA.py",
+		"/home/joao/Documents/FCUP/TESE/scripts/ratios-best-models-MESA.py",
+		"/home/joao/Documents/FCUP/TESE/python/plot_echelle.py",
+		"/home/joao/Documents/FCUP/TESE/python/plot_echelle2.py",
+		"/home/joao/Documents/FCUP/TESE/scripts/echelle-best-models-MESA.py",
+		"/home/joao/Documents/FCUP/TESE/scripts/separations-best-models-MESA.py",
+		"/home/joao/Documents/FCUP/TESE/python/echelle.py",
+		"/home/joao/Documents/FCUP/TESE/python/echelle_cookie.py",
+		"/home/joao/Documents/FCUP/TESE/SA_cygA_Y/yrec-models/reduce_script.sh",
+		"/home/joao/Documents/FCUP/TESE/SA_cygA_Y/yrec-models/reduce.awk",
+		"/home/joao/Documents/FCUP/TESE/SA_cygA_Y/yrec-models/run_sig.sh",
+		"/home/joao/Documents/FCUP/TESE/SA_cygA_Y/yrec-models/YREC_16CygA/res",
+		"/home/joao/Python/astero/freq_class.py",
+		"/home/joao/Python/create_from_backronym.py",
+		"/home/joao/Python/mesa.py",
+		"/home/joao/Documents/FCUP/TESE/scripts/hr_plot.py",
+		"/home/joao/Documents/FCUP/TESE/scripts/kipp-best-models-MESA.py",
+		"/home/joao/Documents/FCUP/TESE/bcz_fit_d2/plots.py",
+		"/home/joao/Python/astero/separations.py",
+		"/home/joao/Documents/FCUP/TESE/python/FreqClass.py",
+		"/home/joao/work/software_astronomers/README",
+		"/home/joao/work/software_astronomers/installation-test-packages.py",
+		"/home/joao/work/software_astronomers/installation-test-python.py",
+		"/home/joao/work/software_astronomers/vc-git-local.md"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"self.t",
+			"self.f",
+			"max(power)",
+			"	",
+			"per",
+			"time",
+			"plow",
+			"fmax2",
+			"ww",
+			"t",
+			"system.time",
+			"a.",
+			"a",
+			" \n",
+			"n",
+			"self",
+			"...",
+			"syntaz",
+			"!*******************************************************************************",
+			"110]",
+			"[90",
+			"+60",
+			"+40",
+			"+20",
+			"-2",
+			"sA",
+			"obsA",
+			"sA",
+			"60",
+			"+50",
+			"+300",
+			"+200",
+			"+100",
+			"28",
+			"6",
+			"12",
+			"1",
+			"0",
+			"i",
+			"self",
+			"pyl.",
+			"	",
+			"self",
+			"plot_star_mass",
+			"star",
+			"macro",
+			"ctrl+b",
+			"}$',",
+			"obs",
+			"logLa",
+			"ctrl+i",
+			"comment",
+			"hrd",
+			"save"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"    ",
+			"pass",
+			"obsA",
+			"",
+			"    ",
+			"star",
+			"LOGGa"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "get_rv.f90",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3095,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								123,
+								123
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fortran/Syntaxes/Fortran - Modern.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 142.0
+	},
+	"project": "rv.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"cla",
+				"~/work/OPEN/OPEN/classes.py"
+			],
+			[
+				"",
+				"~/Documents/FCUP/TESE/scripts/separations-best-models-MESA.py"
+			],
+			[
+				"re",
+				"README"
+			],
+			[
+				"packa",
+				"installation-test-packages.py"
+			],
+			[
+				"py",
+				"installation-test-python.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 550.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/work/OPEN/OPEN.sublime-project"
+			]
+		],
+		"width": 418.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 165.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

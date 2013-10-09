@@ -1,0 +1,13 @@
+run
+    f2py -m lombscargle_f -c lombscargle.f --f77flags="-fast -O3"
+    
+and then "import lombscargle_f" in python
+
+
+- trying OPENMP
+
+    f2py -m lombscargle_f_omp -c lombscargle_openmp.f --f77exec="/home/joao/mesasdk/bin/gfortran" --f77flags="-fopenmp -O2" -lgomp
+    f2py -m lombscargle_f -c lombscargle.f --f77exec="/home/joao/mesasdk/bin/gfortran" --f77flags="-O3 -Ofast"
+    
+serial version with -O3 -Ofast performs better!! (is parallel implemented right?)
+
