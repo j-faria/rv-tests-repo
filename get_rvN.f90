@@ -4,37 +4,44 @@
 !*  K, ecc, omega and t0 corresponding to period, semi-amplitude, eccentricity,
 !*  argument of the periastron and time of periastron.
 !*
-!*  This routine works for one planet only!
-subroutine get_rv( time, P, K, ecc, omega, t0, vel, nt)
+!*  This routine works for NP planets but one observatory only and no 
+!*  systematic velocity!
+subroutine get_rvN(time, P, K, ecc, omega, t0, vel, nt, np)
     implicit none
     
 !f2py intent(in) time(nt)
-!f2py intent(in) vel(nt)
-!f2py intent(in) P
-!f2py intent(in) K
-!f2py intent(in) ecc
-!f2py intent(in) omega
-!f2py intent(in) t0
+!f2py intent(inout) vel(nt)
+!f2py intent(in) P(np)
+!f2py intent(in) K(np)
+!f2py intent(in) ecc(np)
+!f2py intent(in) omega(np)
+!f2py intent(in) t0(np)
 !f2py intent(hide) nt
+!f2py intent(hide) np
 
 ! Input arguments
-    integer nt
+    integer nt, np ! number of observations, planets
     real (kind=8), dimension(nt) :: time, vel
-    real (kind=8) p, k, ecc, omega, t0
+    real (kind=8), dimension(np) :: p, k, ecc, omega, t0
 
 ! Local variables
     integer,parameter :: sp = selected_real_kind(p=6,r=37)
     integer,parameter :: dp = selected_real_kind(p=15,r=307)
+    integer :: i
 
     real(dp), parameter :: pi = 3.1415926535897932384626433832795029_dp
     real(dp), parameter :: twopi = 2.0_dp * pi 
 
-    vel = rv_curve(time, P, K, ecc, omega, t0)
+    vel = 0._dp
+    do i=1,np
+      vel = vel - rv_curve(time, P(i), K(i), ecc(i), omega(i), t0(i))
+    end do 
     
 
 contains
   
   elemental real(dp) function rv_curve(time, P, K, ecc, omega, t0) result(vel)
+  ! RV curve for one planet - see Balan & Lahav (2009), MNRAS, 394, 1936
     real(dp), intent(in) :: time
     real(dp), intent(in) :: P, K, ecc, omega, t0
     real(dp) :: M, f 
