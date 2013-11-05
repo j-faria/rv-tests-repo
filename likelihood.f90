@@ -21,7 +21,7 @@ subroutine likelihood(time, datum, sigma, &
 ! Input arguments
     integer nt, np ! number of observations, planets
     real (kind=8), dimension(nt) :: time, datum, sigma, vel
-    real (kind=8), dimension(np) :: p, k, ecc, omega, t0
+    real (kind=8), dimension(np) :: P, K, ecc, omega, t0
     real (kind=8) :: vsys
 
 ! Local variables
@@ -41,7 +41,7 @@ subroutine likelihood(time, datum, sigma, &
     write(*,*) vel(1)
 
     lhd = product((1._dp / sqrt(twopi*sigma**2)) * exp(-0.5_dp * ((datum - vel)/sigma)**2))
-    write(*,*) lhd * 1d9
+    write(*,*) lhd
 
 
 end subroutine
