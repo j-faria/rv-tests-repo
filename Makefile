@@ -1,6 +1,7 @@
 # for compiling python extensions
 FPY = f2py
-F2PYFLAGS = --f77exec="/home/joao/mesasdk/bin/gfortran" --f77flags="-O3 -Ofast"
+F2PYFLAGS = --f90exec="/usr/bin/gfortran" --opt="-O3 -Ofast"
+F2PYFLAGS += --f90flags="-w -Wno-unused-parameter -fPIC -ffree-line-length-none"
 
 # for compiling Fortran
 FC = gfortran
@@ -19,14 +20,14 @@ FC = mpif90
 FFLAGS += -DMPI
 endif
 
-MN_OBJ = params.o like.o nestwrap.o main.o
+MN_OBJ = params.o like.o nestwrap.o main.o likelihood.o get_rvN.o
 
 
 all: gaussian get_rv1.so get_rvN.so
 
 test: get_rv1.so get_rvN.so
 	python test.py
-	ndiff test/out_test.txt test/out_normal.txt
+	ndiff test/out_test.txt test/out_normal.txt -relerr 1.0e-5
 
 get_rv1.so: get_rv1.f90
 	$(FPY) -m get_rv1 -c $^ $(F2PYFLAGS)
@@ -41,6 +42,9 @@ get_rvN.so: get_rvN.f90 likelihood.f90
 gaussian: $(MN_OBJ)
 	$(FC) -o gaussian $(MN_OBJ) $(FFLAGS) $(LIBS)
 
+
+main: main.f90 like.f90 nestwrap.f90 params.f90
+	$(FPY) -m main -c $^ $(F2PYFLAGS) $(LIBS)
 
 clean: 
 	rm -f gaussian *.so *.o *.mod $(MN_OBJ) 

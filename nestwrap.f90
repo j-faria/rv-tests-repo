@@ -5,6 +5,7 @@ module nestwrapper
 use Nested
 use params
 use like
+use priors
    
 implicit none
    
@@ -43,11 +44,26 @@ contains
 		! on exit has the physical parameters plus a copy of any
 		! derived parameters you want to store
 		double precision Cube(nPar)
+		real(kind=8) :: P, K, ecc, omega, t0
 		 						
 		! Output arguments
 		double precision lnew ! loglikelihood
 		integer context ! additional information user wants to pass
-			   	
+		
+
+		! Transform parameters to physical space
+		! Cube(1:nPar) = P, K, ecc, omega, t0
+		P = UniformPrior(Cube(1), spriorran(1,1), spriorran(1,2))
+		ecc = UniformPrior(Cube(3), spriorran(3,1), spriorran(3,2))
+		omega = UniformPrior(Cube(4), spriorran(4,1), spriorran(4,2))
+		t0 = UniformPrior(Cube(5), spriorran(5,1), spriorran(5,2))
+
+		K = UniformPrior(Cube(2), 50d0, 100d0) ! for now
+
+		Cube(1:nPar) = (/P, K, ecc, omega, t0/)
+		write(unit=*, fmt=*) '+++', Cube(1:nPar)
+		
+
 		!call loglike function here 
 		call slikelihood(Cube,lnew)
 

@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"si",
+				"sigma"
+			],
+			[
+				"sub",
+				"subroutine"
+			],
+			[
+				"ge",
+				"get_rv"
+			],
+			[
+				"vel",
+				"vel1"
+			],
+			[
+				"get",
+				"get_rvN"
+			],
+			[
 				"bo",
 				"bottom_tick_loc"
 			],
@@ -128,16 +148,8 @@
 				"command_list"
 			],
 			[
-				"get",
-				"get_chi2"
-			],
-			[
 				"rvS",
 				"rvSeries"
-			],
-			[
-				"ge",
-				"get_chi2"
 			],
 			[
 				"rv",
@@ -263,14 +275,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "get_rv.f90",
-			"settings":
-			{
-				"buffer_size": 3095,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -307,6 +311,8 @@
 	},
 	"file_history":
 	[
+		"/home/joao/work/RadialVelocity/test.py",
+		"/home/joao/work/RadialVelocity/test/test.py",
 		"/home/joao/work/RadialVelocity/get_rv.f90",
 		"/home/joao/work/OPEN/setup.py",
 		"/home/joao/work/OPEN/OPEN/_OPENversion.py",
@@ -487,38 +493,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "get_rv.f90",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3095,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								123,
-								123
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Fortran/Syntaxes/Fortran - Modern.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

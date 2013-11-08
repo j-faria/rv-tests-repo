@@ -1,6 +1,7 @@
 module like
 
 	use params
+	use utils1
 	implicit none
       
 contains
@@ -14,18 +15,27 @@ contains
 	! is  returned in slhood
 		implicit none
 	      
-		real(kind=8) :: Cube(nest_nPar), slhood
-		real(kind=8) :: TwoPi
+		real(kind=8) :: Cube(nest_nPar), slhood, vel(119)
+		real(kind=8) :: TwoPi, lhood
 		integer :: i
 	         
 		TwoPi = 6.2831853d0
 
-		slhood = - sdim / 2d0 * log( TwoPi )
-		do i = 1, sdim
-			slhood = slhood - log( sigma(i) )
-		enddo
-		
-		slhood = slhood - sum( ( ( Cube( 1:sdim ) - center ) / sigma( 1:sdim ) ) ** 2d0 ) / 2d0
+		! times, rvs and errors are defined in params and initialized in main
+		! Cube(1:nest_nPar) = P, K, ecc, omega, t0
+ 		!write(*,*) Cube(1)
+
+		call likelihood(times, rvs, errors, &
+                      Cube(1), Cube(2), Cube(3), Cube(4), Cube(5), &
+                      0.d0, vel, lhood, 119, 1)
+
+		slhood=-huge(1.d0)*epsilon(1.d0)
+		slhood=logSumExp(slhood,log(lhood))
+! 		slhood = log(lhood)
+! 		write(*,'(f8.3)', advance='no') slhood
+
+
+
 
 	end subroutine slikelihood
       

@@ -1,18 +1,17 @@
 module params
     implicit none
 
+
+! Data
+    real(kind=8), dimension(119) :: times, rvs, errors
+    !real(kind=8), dimension(3,119) :: context
+    integer context
+
 ! Model Parameters
    	
     !dimensionality
     integer sdim
-   	parameter( sdim = 20 )
-      
-    !sigma of the Gaussian (same in each direction)
-	double precision sigma(sdim)
-      
-    !center of the Gaussian (same in each direction)
-    double precision center
-	parameter( center = 0.5d0 )
+   	parameter( sdim = 5 )
 
     !priors on the parameters are set in main.f90
     double precision spriorran(sdim,2)
@@ -35,7 +34,7 @@ module params
 	
     !max no. of live points
     integer nest_nlive
-	parameter(nest_nlive=300)
+	parameter(nest_nlive=300) !300
       
     !total number of parameters, 
     !should be sdim in most cases but if you need to store some 
@@ -54,7 +53,7 @@ module params
       
     !enlargement factor reduction parameter
     double precision nest_efr
-    parameter(nest_efr=0.1d0)
+    parameter(nest_efr=0.8d0)
       
     !root for saving posterior files
     character*100 nest_root
@@ -82,7 +81,7 @@ module params
 
     !whether to resume from a previous run
     logical nest_resume
-    parameter(nest_resume=.true.)
+    parameter(nest_resume=.false.)
 
     !whether to write output files
     logical nest_outfile
@@ -102,7 +101,7 @@ module params
     !iterations or convergence criterion (defined through nest_tol) 
     !has been satisfied
     integer nest_maxIter
-    parameter(nest_maxIter=0)
+    parameter(nest_maxIter=5)
 	
 	!parameters to wrap around (0 is False; non-zero is True) meaning
     !if nest_pWrap(1) = 0, then parameter 1 is NOT wrap around
