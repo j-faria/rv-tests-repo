@@ -64,7 +64,7 @@ module params
 	!posterior files are updated and dumper routine is called
     !after every updInt*10 iterations
 	integer nest_updInt
-	parameter(nest_updInt=1000)
+	parameter(nest_updInt=1)
 	
 	!null evidence 
     !(set it to very high negative number if null evidence is unknown)
@@ -101,7 +101,7 @@ module params
     !iterations or convergence criterion (defined through nest_tol) 
     !has been satisfied
     integer nest_maxIter
-    parameter(nest_maxIter=5)
+    parameter(nest_maxIter=0)
 	
 	!parameters to wrap around (0 is False; non-zero is True) meaning
     !if nest_pWrap(1) = 0, then parameter 1 is NOT wrap around

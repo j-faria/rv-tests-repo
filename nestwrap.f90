@@ -61,7 +61,7 @@ contains
 		K = UniformPrior(Cube(2), 50d0, 100d0) ! for now
 
 		Cube(1:nPar) = (/P, K, ecc, omega, t0/)
-		write(unit=*, fmt=*) '+++', Cube(1:nPar)
+		!write(unit=*, fmt=*) '+++', Cube(1:nPar)
 		
 
 		!call loglike function here 
@@ -91,6 +91,7 @@ contains
 		
 
 		! now do something
+		write(*,*) paramConstr(:)
 
 	end subroutine dumper
 

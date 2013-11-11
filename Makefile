@@ -46,5 +46,19 @@ gaussian: $(MN_OBJ)
 main: main.f90 like.f90 nestwrap.f90 params.f90
 	$(FPY) -m main -c $^ $(F2PYFLAGS) $(LIBS)
 
+
+covmat: covmat_dump.f90
+	$(FC) -o covmat $(FFLAGS) $^
+
+
+
+
+
 clean: 
 	rm -f gaussian *.so *.o *.mod $(MN_OBJ) 
+
+cleanall:
+	rm -f gaussian *.so *.o *.mod $(MN_OBJ) chains/*
+
+cleanchains:
+	rm -f chains/*
