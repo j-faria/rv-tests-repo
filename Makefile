@@ -58,7 +58,7 @@ clean:
 	rm -f gaussian *.so *.o *.mod $(MN_OBJ) 
 
 cleanall:
-	rm -f gaussian *.so *.o *.mod $(MN_OBJ) chains/*
+	rm -f gaussian *.so *.o *.mod $(MN_OBJ) chains/* covmat
 
 cleanchains:
 	rm -f chains/*
