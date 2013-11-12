@@ -7,11 +7,15 @@ F2PYFLAGS += --f90flags="-w -Wno-unused-parameter -fPIC -ffree-line-length-none"
 FC = gfortran
 FFLAGS +=  -I. -O3 -w -Wno-unused-parameter -fPIC -ffree-line-length-none
 
+# utils library directory
+FLIBDIR = /home/joao/Programs/fortran/lib
+FLIB = -L$(FLIBDIR) -I$(FLIBDIR) -lmodules
 
 # for MultiNest
 NESTLIBDIR=/home/joao/Programs/MultiNest_v3.0/
 LAPACKLIB = -llapack -L/usr/lib
-LIBS = -L$(NESTLIBDIR) -lnest3 $(LAPACKLIB)
+
+LIBS = -L$(NESTLIBDIR) -lnest3 $(LAPACKLIB) $(FLIB)
 ifndef WITHOUT_MPI
 # compiling with MPI support. 
 # You can disable this with 
@@ -23,7 +27,8 @@ endif
 MN_OBJ = params.o like.o nestwrap.o main.o likelihood.o get_rvN.o
 
 
-all: gaussian get_rv1.so get_rvN.so
+all: gaussian get_rv1.so get_rvN.so covmat
+fortran: gaussian covmat
 
 test: get_rv1.so get_rvN.so
 	python test.py
@@ -46,9 +51,9 @@ gaussian: $(MN_OBJ)
 main: main.f90 like.f90 nestwrap.f90 params.f90
 	$(FPY) -m main -c $^ $(F2PYFLAGS) $(LIBS)
 
-
+FLIBDIR = /home/joao/Programs/fortran/lib
 covmat: covmat_dump.f90
-	$(FC) -o covmat $(FFLAGS) $^
+	$(FC) -o covmat $(FFLAGS) $^ -L$(FLIBDIR) -I$(FLIBDIR) $(LAPACKLIB) -lmodules
 
 
 
