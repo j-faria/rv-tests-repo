@@ -7,15 +7,23 @@ program main
 	implicit none
 	
 	integer i
-	real(kind=8), parameter :: pi = 4.0d0*atan(1.0d0)
-	real(kind=8), parameter :: twopi = 2.0d0*pi
+	integer, parameter :: n=119
+	integer, parameter :: nobserv=1
+! 	real(kind=8), parameter :: pi = 4.0d0*atan(1.0d0)
+! 	real(kind=8), parameter :: twopi = 2.0d0*pi
 
 	real(kind=8), parameter :: kmax = 2129d0 ! m/s
 	real(kind=8) :: slhood
 
+	!doing debug?
+	doing_debug = .false.
+
+	!initialize data size dependant variables
+	call likelihood_init(n)
+
 	!load data
 	open(unit=15, file='14her.rv', status="old")
-	do i = 1, 119
+	do i = 1, n
         read(15, *) times(i), rvs(i), errors(i)
     end do
 

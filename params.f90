@@ -1,11 +1,11 @@
 module params
     implicit none
 
+! Debug
+    logical :: doing_debug
 
 ! Data
-    real(kind=8), dimension(119) :: times, rvs, errors
-    !real(kind=8), dimension(3,119) :: context
-    integer context
+    real(kind=8), allocatable, dimension(:) :: times, rvs, errors
 
 ! Model Parameters
    	
@@ -15,7 +15,14 @@ module params
 
     !priors on the parameters are set in main.f90
     double precision spriorran(sdim,2)
-      
+
+    ! nuisance parameters and auxiliary variables
+    integer, allocatable, dimension(:) :: observ
+    real(kind=8), allocatable, dimension(:) :: ss, alpha, tau
+    real(kind=8), allocatable, dimension(:,:) :: covmat, inv_covmat
+
+    !real(kind=8), dimension(3,119) :: context
+    integer context      
 
 
 ! Parameters for MultiNest
@@ -101,7 +108,7 @@ module params
     !iterations or convergence criterion (defined through nest_tol) 
     !has been satisfied
     integer nest_maxIter
-    parameter(nest_maxIter=0)
+    parameter(nest_maxIter=1000)
 	
 	!parameters to wrap around (0 is False; non-zero is True) meaning
     !if nest_pWrap(1) = 0, then parameter 1 is NOT wrap around

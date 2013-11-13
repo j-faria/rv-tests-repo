@@ -24,7 +24,8 @@ FC = mpif90
 FFLAGS += -DMPI
 endif
 
-MN_OBJ = params.o like.o nestwrap.o main.o likelihood.o get_rvN.o
+MN_OBJ = params.o like.o nestwrap.o main.o
+MN_OBJ += likelihood.o get_rvN.o
 
 
 all: gaussian get_rv1.so get_rvN.so covmat

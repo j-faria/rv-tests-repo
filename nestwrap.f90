@@ -33,6 +33,7 @@ contains
 
 	subroutine getLogLike(Cube,n_dim,nPar,lnew,context)
 	! Wrapper around Likelihood Function which rescales parameters
+	! and then calls the actual likelihood calculations
 		implicit none
 		
 		! Input arguments
@@ -51,7 +52,7 @@ contains
 		integer context ! additional information user wants to pass
 		
 
-		! Transform parameters to physical space
+		! Transform parameters to physical space using assigned priors
 		! Cube(1:nPar) = P, K, ecc, omega, t0
 		P = UniformPrior(Cube(1), spriorran(1,1), spriorran(1,2))
 		ecc = UniformPrior(Cube(3), spriorran(3,1), spriorran(3,2))
@@ -62,7 +63,6 @@ contains
 
 		Cube(1:nPar) = (/P, K, ecc, omega, t0/)
 		!write(unit=*, fmt=*) '+++', Cube(1:nPar)
-		
 
 		!call loglike function here 
 		call slikelihood(Cube,lnew)
@@ -91,7 +91,8 @@ contains
 		
 
 		! now do something
-		write(*,*) paramConstr(:)
+		if (doing_debug) write(*,*) paramConstr(:)
+		write(*,*) paramConstr(1:nPar)
 
 	end subroutine dumper
 

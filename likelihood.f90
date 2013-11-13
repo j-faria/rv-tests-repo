@@ -34,12 +34,10 @@ subroutine likelihood(time, datum, sigma, &
 
     real(dp) :: lhd     
 
-
-
     ! get the radial velocity model with these parameters (in vel)
     call get_rvN(time, P, K, ecc, omega, t0, vsys, vel, nt, np)
 
-    lhood = product((1._dp / sqrt(twopi*sigma**2)) * exp(-0.5_dp * ((datum - vel)/sigma)**2))
+!    lhood = product((1._dp / sqrt(twopi*sigma**2)) * exp(-0.5_dp * ((datum - vel)/sigma)**2))
 !     write(*,*) lhood
 
 
