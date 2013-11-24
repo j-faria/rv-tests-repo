@@ -45,7 +45,7 @@ contains
 		! on exit has the physical parameters plus a copy of any
 		! derived parameters you want to store
 		double precision Cube(nPar)
-		real(kind=8) :: P, K, ecc, omega, t0
+		real(kind=8) :: P, K, ecc, omega, t0, Vsys
 		 						
 		! Output arguments
 		double precision lnew ! loglikelihood
@@ -60,8 +60,9 @@ contains
 		t0 = UniformPrior(Cube(5), spriorran(5,1), spriorran(5,2))
 
 		K = UniformPrior(Cube(2), 50d0, 100d0) ! for now
+		Vsys = UniformPrior(Cube(6), spriorran(6,1), spriorran(6,2))
 
-		Cube(1:nPar) = (/P, K, ecc, omega, t0/)
+		Cube(1:nPar) = (/P, K, ecc, omega, t0, Vsys/)
 		!write(unit=*, fmt=*) '+++', Cube(1:nPar)
 
 		!call loglike function here 
@@ -95,6 +96,29 @@ contains
 		write(*,*) paramConstr(1:nPar)
 
 	end subroutine dumper
+
+	! these should be in priors.f90 but I'm afraid of recompiling it :)
+	!=======================================================================
+	! Uniform[0:1]  ->  Exponential[0:inf]
+
+	function ExpPrior(r)
+      	implicit none
+      	double precision r,ExpPrior
+      	
+      	ExpPrior=-log(1.d0-r)
+
+	end function ExpPrior
+
+	!=======================================================================
+	! Uniform[0:1]  ->  Jeffreys[x1:x2]
+
+	function JeffreysPrior(r, x1, x2)
+		implicit none
+		double precision r,x1,x2,JeffreysPrior
+
+		JeffreysPrior=x1*(x2/x1)**r
+		
+	end function JeffreysPrior
 
 
 end module nestwrapper

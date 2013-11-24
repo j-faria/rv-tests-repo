@@ -9,8 +9,6 @@ program main
 	integer i
 	integer, parameter :: n=119
 	integer, parameter :: nobserv=1
-! 	real(kind=8), parameter :: pi = 4.0d0*atan(1.0d0)
-! 	real(kind=8), parameter :: twopi = 2.0d0*pi
 
 	real(kind=8), parameter :: kmax = 2129d0 ! m/s
 	real(kind=8) :: slhood
@@ -51,11 +49,10 @@ program main
 	!! chi, Uniform, 0-1
 	spriorran(5,1)=2.45128604d6
 	spriorran(5,2)=2.45148604d6
-
-! 	!! systematic velocity, Uniform
-! 	!! Vmin = -Kmax, Vmax = Kmax
-! 	spriorran(6,1)= -kmax
-! 	spriorran(6,2)= kmax		
+	!! systematic velocity, Uniform
+	!! Vmin = -Kmax, Vmax = Kmax
+	spriorran(6,1)= -kmax
+	spriorran(6,2)= kmax		
 
 
 ! 	stop "we have to stop here"

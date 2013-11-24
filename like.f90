@@ -38,7 +38,7 @@ contains
 		integer :: i
 
 		! times, rvs and errors are defined in params and initialized/read in main
-		! Cube(1:nest_nPar) = P, K, ecc, omega, t0
+		! Cube(1:nest_nPar) = P, K, ecc, omega, t0, Vsys
  		!write(*,*) Cube(1)
  		observ = 1
  		ss = 1.d0
@@ -50,14 +50,13 @@ contains
  		! get the radial velocity model with these parameters (in vel)
     call get_rvN(times, &
     	           Cube(1), Cube(2), Cube(3), Cube(4), Cube(5), &
-    	           0.d0, vel, 119, 1)
+    	           Cube(6), vel, 119, 1)
 
     dist = rvs - vel
     call get_covmat(times, errors, observ, ss, alpha, tau, covmat, det, inv_covmat)
 
     lhood_test = -0.5d0 * matmul(matmul(reshape(dist, (/1,119/)), covmat), reshape(dist, (/119,1/)))
     lhood = lhood_test(1,1) - 0.5d0*log(twopi**119 * det)
-
 
 ! 		call likelihood(times, rvs, errors, &
 !                       Cube(1), Cube(2), Cube(3), Cube(4), Cube(5), &
