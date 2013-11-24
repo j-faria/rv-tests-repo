@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"nan",
+				"nanmean"
+			],
+			[
+				"fil",
+				"filenames"
+			],
+			[
+				"inte",
+				"intent"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"J",
+				"JeffreysPrior"
+			],
+			[
+				"n",
+				"npar"
+			],
+			[
+				"par",
+				"par_file"
+			],
+			[
 				"si",
 				"sigma"
 			],
@@ -160,10 +188,6 @@
 				"Options"
 			],
 			[
-				"par",
-				"parameter_s"
-			],
-			[
 				"ar",
 				"argv"
 			],
@@ -186,10 +210,6 @@
 			[
 				"arg_",
 				"arg_string_split"
-			],
-			[
-				"n",
-				"needs_local_scope"
 			],
 			[
 				"de",
@@ -275,6 +295,70 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "like.f90",
+			"settings":
+			{
+				"buffer_size": 3245,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "analysis.py",
+			"settings":
+			{
+				"buffer_size": 915,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test.py",
+			"settings":
+			{
+				"buffer_size": 388,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "get_rvN.f90",
+			"settings":
+			{
+				"buffer_size": 3522,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "main.f90",
+			"settings":
+			{
+				"buffer_size": 1319,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "nestwrap.f90",
+			"settings":
+			{
+				"buffer_size": 3758,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/joao/phd/courses/research-seminar/residuals-jorge/script.py",
+			"settings":
+			{
+				"buffer_size": 2128,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "params.f90",
+			"settings":
+			{
+				"buffer_size": 3467,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -311,6 +395,7 @@
 	},
 	"file_history":
 	[
+		"/home/joao/work/stats/autocov.f90",
 		"/home/joao/work/RadialVelocity/test.py",
 		"/home/joao/work/RadialVelocity/test/test.py",
 		"/home/joao/work/RadialVelocity/get_rv.f90",
@@ -401,7 +486,7 @@
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -415,6 +500,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"#",
 			"self.t",
 			"self.f",
 			"max(power)",
@@ -493,14 +579,239 @@
 	"groups":
 	[
 		{
+			"selected": 6,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "like.f90",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3245,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1485,
+								1485
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fortran/Syntaxes/Fortran - Modern.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 858.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "analysis.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 915,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								906,
+								906
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 396.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "test.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 388,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								334,
+								334
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "get_rvN.f90",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3522,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fortran/Syntaxes/Fortran - Modern.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "main.f90",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1319,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1142,
+								1142
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fortran/Syntaxes/Fortran - Modern.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 726.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "nestwrap.f90",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3758,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3671,
+								3671
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fortran/Syntaxes/Fortran - Modern.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1782.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/joao/phd/courses/research-seminar/residuals-jorge/script.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2128,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1435,
+								1435
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 798.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "params.f90",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								922,
+								922
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fortran/Syntaxes/Fortran - Modern.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -536,7 +847,7 @@
 	"project": "rv.sublime-project",
 	"replace":
 	{
-		"height": 70.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -574,7 +885,7 @@
 		[
 			[
 				"",
-				"~/work/OPEN/OPEN.sublime-project"
+				"~/work/RadialVelocity/rv.sublime-project"
 			]
 		],
 		"width": 418.0

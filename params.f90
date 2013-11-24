@@ -11,7 +11,7 @@ module params
    	
     !dimensionality
     integer sdim
-   	parameter( sdim = 5 )
+   	parameter( sdim = 6 )
 
     !priors on the parameters are set in main.f90
     double precision spriorran(sdim,2)
@@ -29,7 +29,7 @@ module params
 
     !whether to do use Nested Importance Sampling
 	logical nest_IS
- 	parameter(nest_IS=.true.)
+ 	parameter(nest_IS=.false.)
 	
     !whether to do multimodal sampling
 	logical nest_mmodal 
@@ -64,7 +64,7 @@ module params
       
     !root for saving posterior files
     character*100 nest_root
-	parameter(nest_root='chains/gaussian-')
+	parameter(nest_root='chains/nest-')
 	
 	!after how many iterations feedback is required and the output
     !files should be updated 
